@@ -1,9 +1,9 @@
-function Inicio (){
-return(
-    <>
-    
-    </>
-)
-
+function Inicio(){
+    return(
+        <>
+        <h2>Inicio</h2>
+        </>
+    )
 }
-export default Inicio 
+
+export default Inicio

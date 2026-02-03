@@ -1,9 +1,9 @@
-function Perfil (){
-return(
-    <>
-    
-    </>
-)
-
+function Perfil() {
+    return (
+        <>
+            <h2>Perfil</h2>
+        </>
+    )
 }
-export default Perfil 
+
+export default Perfil
