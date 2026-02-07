@@ -8,14 +8,15 @@ function Perfil() {
             <article>
                 <img src={ImgPerfil} alt="Foto de perfil de Fernanda Correa" />
                 <div className={styles.cardInfo}>
-                    <h2>Fernanda Correa</h2>
-                    <h3>Voluntária Ativa</h3>
+                    <h2>Oswaldo Araujo</h2>
+                    <h3>Voluntário Ativo</h3>
 
-                    <p className={styles.paragrafoSobreMim}>Apaixonada por fazer a diferença na comunidade. Acredito que pequenas ações podem transformar vidas e estou sempre em busca de novas oportunidades para ajudar.</p>
+                    <p className={styles.paragrafoSobreMim}>Apaixonado por fazer a diferença na comunidade. 
+                        Acredito que pequenas ações podem transformar vidas e estou sempre em busca de novas oportunidades para ajudar.</p>
 
                     <address>
-                        <p>Magé, RJ</p>
-                        <p>fernandacorrea@email.com</p>
+                        <p>Rocinha, RJ</p>
+                        <p>oswaldolordneco@email.com</p>
                         <p>Membro desde Janeiro de 2022</p>
                     </address>
 
