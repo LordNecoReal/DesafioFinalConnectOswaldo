@@ -6,21 +6,24 @@ import AcoesDaConnect from '../AcoesDaConnect/AcoesDaConnect'
 import QuemSomos from '../QuemSomos/QuemSomos'
 import Perfil from '../Perfil/Perfil'
 
+// Importando a folha de estilo
+import styles from './NavBar.module.scss'
+
 //Importar Imagens
 import Logo from '../../assets/logo.png'
-import ImgPerfil from '../../assets/perfil.png'
+import ImgPerfil from '../../assets/perfil.jpg'
 
 function NavBar() {
     return (
         <BrowserRouter>
-            <nav>
+            <nav className={styles.navBar} >
                 <Link to='/'>
                     <img src={Logo} alt="Logo do projeto" />
                 </Link>
 
                 <ul>
                     <li>
-                        <Link to='/'>Inicio</Link>
+                        <Link to='/'>Início</Link>
                     </li>
                     <li>
                         <Link to='/acoesDaConnect'>Ações da Connect</Link>
@@ -31,7 +34,7 @@ function NavBar() {
                 </ul>
 
                 <Link to='/perfil'>
-                    <img src={ImgPerfil} alt="Foto de perfil" />
+                    <img className={styles.imgPerfil} src={ImgPerfil} alt="Foto de perfil" />
                 </Link>
             </nav>
 
