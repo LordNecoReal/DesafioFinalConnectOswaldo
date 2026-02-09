@@ -1,11 +1,16 @@
 import { useState } from 'react'
+
 import Mutirao from '../../assets/mutirao.png'
 import Aulas from '../../assets/aulas.png'
 import Esporte from '../../assets/esporte.png'
 import Familia from '../../assets/familia.png'
 import Futuro from '../../assets/futuro.png'
 import Conecta from '../../assets/conecta.png'
+
+import styles from './AcoesDaConnect.module.scss'
+
 function AcoesDaConnect() {
+
     const [cards] = useState([
         {
             id: 1,
@@ -50,16 +55,17 @@ function AcoesDaConnect() {
             botao: 'Quero doar'
         },
     ])
+
     return (
-        <section>
-            <div>
+        <section className={styles.containerDeAcoes} >
+            <div className={styles.boxTituloAcoes}>
                 <h2>Ações da Connect</h2>
                 <p>Junte-se a quem acredita na mudança. Apoie, participe e transforme vidas através de ações sociais que geram impacto real nas comunidades.</p>
             </div>
-            <section>
+            <section className={styles.containerCardsDeAcoes}>
                 {
                     cards.map((item) => (
-                        <article key={item.id}>
+                        <article className={styles.cardsDeAcoes} key={item.id}>
                             <img src={item.imagem} alt={item.titulo} />
                             <h2>{item.titulo}</h2>
                             <p>{item.informacao}</p>
@@ -71,4 +77,5 @@ function AcoesDaConnect() {
         </section>
     )
 }
+
 export default AcoesDaConnect
