@@ -1,6 +1,8 @@
 import NavBar from "./components/NavBar/NavBar"
 import './global.scss'
 
+
+
 function App() {
   return (
     <>
@@ -10,3 +12,4 @@ function App() {
 }
 
 export default App
+

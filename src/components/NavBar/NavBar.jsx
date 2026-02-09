@@ -13,6 +13,8 @@ import styles from './NavBar.module.scss'
 import Logo from '../../assets/logo.png'
 import ImgPerfil from '../../assets/perfil.jpg'
 
+
+
 function NavBar() {
     return (
         <BrowserRouter>
