@@ -1,33 +1,25 @@
-import React from 'react'
-import logo from '../../assets/logo.png';
-import whats from '../../assets/whatsapp.png';
-import linkedin from '../../assets/linkedin.png';
-import instagram from '../../assets/instagram.png';
+import Logo from '../../assets/logo.png'
+import Whatsapp from '../../assets/whatsapp.png'
+import Instagram from '../../assets/instagram.png'
+import Linkedin from '../../assets/linkedin.png'
 
-import styles from './Footer.module.scss';
+import styles from './Footer.module.scss'
 
-
-
-
-export default function Footer() {
-  return (
-    <footer className={styles.footer}>
-      <div className={styles.logoContainer}>
-        <img src={logo} alt="Logo" />
-        <p>Connect</p>
-      </div>
-      <div className={styles.textContainer}>
-        <p>© 2026 Vai na Web & Empower. Todos os direitos reservados.</p>
-        <p> Projeto destinado exclusivamente a fins educativos.</p>
-      </div>
-      <div className={styles.socialContainer}>
-        <a href=""><img src={whats} alt="WhatsApp" className={styles.icon}/></a>
-        <a href=""><img src={linkedin} alt="linkedin" className={styles.icon} /></a>
-        <a href=""><img src={instagram} alt="Instagram" className={styles.icon} /></a>
-        
-      </div>     
-
-
-    </footer>
-  )
+function Footer() {
+    return (
+        <footer>
+            <div>
+                <img src={Logo} alt="Logo da Footer" />
+                <h2>Connect</h2>
+            </div>
+            <p>© 2026 Vai na Web & Empower. Todos os direitos reservados. Projeto destinado exclusivamente a fins educativos.</p>
+            <nav className={styles.navFooter}>
+                <img src={Whatsapp} alt="Logo do Whatsapp" />
+                <img src={Instagram} alt="Logo do Instagram" />
+                <img src={Linkedin} alt="Logo do Linkedin" />
+            </nav>
+        </footer>
+    )
 }
+
+export default Footer
