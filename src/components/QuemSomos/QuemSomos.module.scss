@@ -29,7 +29,7 @@
 }
 
 /* Responsividade Mobile (Conforme a imagem do Figma) */
-@media screen and (min-width: 201px) and (max-width: 500px) {
+@media (min-width: 201px) and (max-width: 500px) {
     .containerQuemSomos {
         height: auto; /* Permite que o container cresça com o texto */
         padding: 10% 5%; /* Espaçamento interno para não grudar nas bordas */
