@@ -73,7 +73,7 @@ address {
 }
 
 /* --- Ajustes para Mobile (Telas até 768px) --- */
-@media (max-width: 768px) {
+@media (min-width: 201px) and (max-width: 500px){
     .containerTelaPerfil article {
         flex-direction: column; /* Empilha foto e info como no print */
         padding: 1.5rem;
