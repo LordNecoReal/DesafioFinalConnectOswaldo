@@ -1,6 +1,6 @@
-/* --- Seu código original com leves ajustes de flex-wrap --- */
+/* --- Base e Desktop --- */
 .containerTelaPerfil {
-    min-height: 80vh; /* Mudado para min-height para não cortar conteúdo longo */
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,15 +10,17 @@
         border: solid #EFEEEA;
         border-radius: 16px;
         width: 100%;
-        max-width: 1000px;
+        max-width: 1000px; /* Limite máximo para telas grandes */
+        min-width: 320px;  /* Limite mínimo para telas muito pequenas */
         min-height: 50vh;
         display: flex;
+        flex-direction: row; /* Lado a lado no desktop */
         justify-content: space-evenly;
         align-items: center;
         padding: 2rem;
 
         img {
-            height: 250px; /* Tamanho fixo ou proporcional costuma ser melhor que vh para fotos */
+            height: 250px;
             width: 250px;
             object-fit: cover;
             border-radius: 100%;
@@ -28,90 +30,68 @@
 }
 
 .cardInfo {
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    gap: 1.5rem; /* Adicionado para espaçamento consistente */
+    gap: 1.5rem;
 
     h2 { font-size: 1.85rem; }
     h3 { font-size: 1.2rem; font-weight: 400; color: #278733; }
 
     .paragrafoSobreMim {
         text-align: center;
-        width: 80%;
+        width: 90%;
     }
 }
 
 address {
     display: flex;
-    justify-content: space-between;
-    width: 60%;
-    p { font-size: 0.85rem; }
+    flex-direction: column; /* Coluna para facilitar leitura */
+    align-items: center;
+    gap: 0.5rem;
+    font-style: normal;
+    p { font-size: 0.9rem; }
 }
 
 .listaInteresses {
-    width: 70%;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; /* Importante para não vazar da tela */
-    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
 
     li {
         list-style: none;
         color: #278733;
-        font-size: 0.82rem;
+        font-size: 0.75rem;
         font-weight: 600;
         background-color: #D4E7D6;
-        padding: 0.6rem 1rem;
-        border-radius: 10px;
+        padding: 0.4rem 0.8rem;
+        border-radius: 8px;
     }
 }
 
-/* --- REGRAS PARA MOBILE (Até 768px) --- */
+/* --- Ajustes para Mobile (Telas até 768px) --- */
 @media (max-width: 768px) {
-    .containerTelaPerfil {
-        height: auto;
-        padding: 40px 10px;
-
-        article {
-            flex-direction: column; /* Empilha a foto sobre o texto */
-            height: auto;
-            padding: 30px 15px;
-            text-align: center;
-
-            img {
-                width: 180px; /* Foto menor no mobile */
-                height: 180px;
-                margin-bottom: 20px;
-            }
-        }
+    .containerTelaPerfil article {
+        flex-direction: column; /* Empilha foto e info como no print */
+        padding: 1.5rem;
+        max-width: 393px; /* Largura padrão do Figma que você enviou */
+        border: none;    /* Opcional: remover borda no mobile se quiser tela cheia */
     }
 
     .cardInfo {
-        width: 100%; /* Ocupa a largura total do card */
-        height: auto;
-        gap: 1rem;
+        width: 100%; /* Ocupa a largura total no mobile */
+    }
 
-        .paragrafoSobreMim {
-            width: 100%;
-        }
+    .containerTelaPerfil article img {
+        height: 180px; /* Foto um pouco menor para caber melhor no mobile */
+        width: 180px;
+        margin-bottom: 1rem;
     }
 
     address {
         width: 100%;
-        flex-direction: column; /* Cidade e estado um embaixo do outro, se preferir */
-        gap: 5px;
-    }
-
-    .listaInteresses {
-        width: 100%;
-        justify-content: center;
-        padding: 0;
-        
-        li {
-            font-size: 0.75rem;
-        }
     }
 }

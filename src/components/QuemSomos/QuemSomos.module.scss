@@ -7,6 +7,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 20px; /* Adicionado para evitar que o conteúdo encoste nas bordas */
 }
 
 .boxTextoQuemSomos {
@@ -28,3 +29,32 @@
     width: 85%;
 }
 
+/* --- Responsividade (Mobile) --- */
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    .containerQuemSomos {
+        height: auto; /* Permite que o container cresça se o texto for longo */
+        min-height: 100vh; 
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        padding: 40px 20px; /* Adiciona respiro nas laterais e topos */
+        background-image: none;
+    }
+
+    .boxTextoQuemSomos {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        height: auto; /* Altura automática para não esmagar o texto */
+        gap: 20px; /* Espaçamento entre os elementos internos */
+        text-align: center; /* Centraliza o texto para melhor leitura em telas pequenas */
+    }
+
+    .boxTextoQuemSomos h2 {
+        width: 100%; /* H2 ocupa a largura total da box */
+        font-size: 1.8rem; /* Reduz o tamanho da fonte para mobile */
+    }
+
+    .boxTextoQuemSomos p {
+        width: 100%; /* Parágrafo ocupa a largura total da box */
+        font-size: 1.1rem; /* Ajuste para legibilidade */
+    }
+}
