@@ -28,35 +28,3 @@
     width: 85%;
 }
 
-/* Responsividade Mobile (Conforme a imagem do Figma) */
-@media (min-width: 201px) and (max-width: 500px) {
-    .containerQuemSomos {
-        height: auto; /* Permite que o container cresça com o texto */
-        padding: 10% 5%; /* Espaçamento interno para não grudar nas bordas */
-        background-image: none; /* Geralmente remove-se o fundo pesado no mobile, ou ajuste conforme preferir */
-        justify-content: center; /* Centraliza a boxTexto no meio da tela */
-        align-items: flex-start;
-    }
-
-    .boxTextoQuemSomos {
-        width: 100%; /* Ocupa a largura total disponível */
-        height: auto;
-        text-align: center; /* Alinha o texto no centro como no Figma */
-        display: block; /* Facilita o respiro entre parágrafos no mobile */
-    }
-
-    .boxTextoQuemSomos h2 {
-        width: 100%; /* H2 ocupa toda a largura */
-        font-size: 2.2rem; /* Tamanho aproximado dos 36px do Figma */
-        margin-bottom: 8%;
-        color: #205691;
-    }
-
-    .boxTextoQuemSomos p {
-        width: 100%; /* Texto ocupa toda a largura */
-        font-size: 1.1rem; 
-        line-height: 150%;
-        margin-bottom: 5%;
-        text-align: left; /* No Figma o bloco é centralizado mas o texto é alinhado à esquerda/justificado */
-    }
-}
